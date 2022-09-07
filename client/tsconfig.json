@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2016",
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    // note: "noEmit: true" doesn't allow compilation using rootDir/outDir
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -14,17 +13,14 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "CommonJS",
-    "declaration": true,
-    "rootDir": "./",
-    "sourceMap": true,
-    "outDir": "build",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false
+    "isolatedModules": false,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
   "include": [
-    "*.ts",
-    "db/conn.ts"
+    "src"
   ]
 }
