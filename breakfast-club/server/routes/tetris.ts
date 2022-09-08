@@ -5,16 +5,17 @@ const { ObjectId } = require('mongodb');
 
 
 tetrisRoutes
-  .route('/leaderboard/list')
+  .route('/api')
   .get((req: any, res: any) => {
-    let db_connect = dbo.getDb('breakfast_clubDB');
+    let db_connect = dbo.getDb("breakfast_clubDB");
     db_connect
-    .collection('profiles')
+    .collection("profiles")
     .find({})
     .toArray((err: any, result: any[]) => {
       if(err) throw err;
       res.json(result);
     });
+    // res.json([{displayName: 'Dre'}])
   });
 
 module.exports = tetrisRoutes
