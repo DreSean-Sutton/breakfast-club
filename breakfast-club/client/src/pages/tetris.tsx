@@ -24,6 +24,7 @@ export default function Tetris() {
   })
   return (
     <Container>
+      <h3 className='text-center'>Tetris</h3>
       <Table bordered hover>
         <thead>
           <tr>

@@ -9,10 +9,10 @@ export default function TopNavbar() {
       <Container>
         <Navbar.Brand href="#home">Breakfast Club</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
+          <Nav className="">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <Nav.Link href="#link">Profile</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
