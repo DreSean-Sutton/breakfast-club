@@ -1,21 +1,19 @@
 var express = require('express');
-require('../db/conn');
-var tetrisRoutes = express.Router();
+var dbo = require('../db/conn');
+const router = express.Router();
 const { ObjectId } = require('mongodb');
 
-
-tetrisRoutes
-  .route('/api')
-  .get((req: any, res: any) => {
+router
+  .route("/")
+  .get(function (req: any, res: any) {
     let db_connect = dbo.getDb("breakfast_clubDB");
     db_connect
-    .collection("profiles")
-    .find({})
-    .toArray((err: any, result: any[]) => {
-      if(err) throw err;
-      res.json(result);
-    });
-    // res.json([{displayName: 'Dre'}])
+      .collection("tetris")
+      .find({})
+      .toArray(function (err: any, result: any) {
+        if (err) throw err;
+        res.json(result);
+      });
   });
 
-module.exports = tetrisRoutes
+module.exports = router
